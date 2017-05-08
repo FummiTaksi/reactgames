@@ -1,5 +1,8 @@
 language: node_js
 node_js: 7
+
+cache: yarn
+
 deploy:
   provider: heroku
   app: shrouded-plateau-43789
