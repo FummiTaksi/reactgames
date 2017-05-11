@@ -1,20 +1,42 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Game from './Game.js';
 
 class App extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      game: "",
+    };
+}
   render() {
     return (
+
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React Games</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="App-intro">
+        <a href="" onClick={(event) => this.handleGame("Tic Tac Toe", event)}>
+        Tic Tac Toe
+        </a>
+        {this.state.game == "Tic Tac Toe" && <Game />}
+        </div>
+
       </div>
+
+
+
     );
+  }
+
+  handleGame(name, event) {
+    event.preventDefault();
+
+    this.setState({game: name})
   }
 }
 
