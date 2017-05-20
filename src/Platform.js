@@ -12,7 +12,7 @@ class Platform extends React.Component {
 
   render() {
   return (
-    <div class = "platform">
+    <div className = "platform">
     <h1>Play rock-paper-scissors</h1>
     {this.renderSquare("ROCK")}
     {this.renderSquare("PAPER")}

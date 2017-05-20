@@ -76,7 +76,7 @@ class RockPaperScissor extends React.Component {
 
   render() {
   return (
-       <div class = "rockpaperscissor">
+       <div className="rockpaperscissor">
        <Platform
         onClick={(i) => this.handleClick(i)}
        />
