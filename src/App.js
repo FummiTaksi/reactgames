@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Game from './Game.js';
+import RockPaperScissor from './RockPaperScissor.js'
 
 class App extends Component {
 
@@ -9,6 +10,7 @@ class App extends Component {
     super();
     this.state = {
       game: "",
+      component: "",
     };
 }
   render() {
@@ -23,7 +25,14 @@ class App extends Component {
         <a href="" onClick={(event) => this.handleGame("Tic Tac Toe", event)}>
         Tic Tac Toe
         </a>
+        <br></br>
+        <a href="" onClick={(event) => this.handleGame("Rock Paper Scissors", event)}>
+        Rock Paper Scissor
+        </a>
+        {this.state.game == "Rock Paper Scissors" && <RockPaperScissor />}
         {this.state.game == "Tic Tac Toe" && <Game />}
+
+
         </div>
 
       </div>
@@ -37,6 +46,12 @@ class App extends Component {
     event.preventDefault();
 
     this.setState({game: name})
+    if (name === "Tic Tac Toe") {
+      this.state.component = "Game";
+    }
+    if (name === "Rock Papere Scissors") {
+      this.state.component = "RockPaperScissor";
+    }
   }
 }
 
