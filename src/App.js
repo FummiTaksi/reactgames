@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Game from './Game.js';
-import RockPaperScissor from './RockPaperScissor.js'
+import ReactTestUtils from 'react-dom/test-utils';
+import Game from './TicTacToe/Game.js';
+import RockPaperScissor from './RockPaperScissor/RockPaperScissor.js'
 
 class App extends Component {
 
