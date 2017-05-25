@@ -50,7 +50,7 @@ class App extends Component {
     if (name === "Tic Tac Toe") {
       this.state.component = "Game";
     }
-    if (name === "Rock Papere Scissors") {
+    if (name === "Rock Paper Scissors") {
       this.state.component = "RockPaperScissor";
     }
   }
