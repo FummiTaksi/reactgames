@@ -80,9 +80,9 @@ class RockPaperScissor extends React.Component {
        <Platform
         onClick={(i) => this.handleClick(i)}
        />
-       {this.state.score}
+       <h2>{this.state.score}</h2>
        <br></br>
-       {this.state.round}
+       <h3>{this.state.round}</h3>
        </div>
   )
  }
