@@ -102,3 +102,22 @@ it ("TicTacToe shows 0:s turn after first move", function() {
 
 
 });
+
+it ("Shows right winner", function () {
+  var component = TestUtils.renderIntoDocument(
+      < Game/>
+  );
+
+  component.handleClick(0);
+  component.handleClick(3);
+  component.handleClick(1);
+  component.handleClick(4);
+  component.handleClick(2);
+
+  var h1 = TestUtils.findRenderedDOMComponentWithTag(
+    component, 'h1'
+  );
+
+  expect(ReactDOM.findDOMNode(h1).textContent)
+      .toEqual("Winner: X");
+});
