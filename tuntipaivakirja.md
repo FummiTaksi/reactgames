@@ -1,4 +1,4 @@
-## Yhteensä 15,25h
+## Yhteensä 13,25h
 Päivä | Tunnit | Mitä tein
 --- | -------- | -----
 
